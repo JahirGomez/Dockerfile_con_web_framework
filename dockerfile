@@ -6,3 +6,4 @@ COPY /src/index.js .
 RUN npm install
 EXPOSE 80
 CMD ["npm", "start"]
+CMD["node" ".//src//index.js"]
