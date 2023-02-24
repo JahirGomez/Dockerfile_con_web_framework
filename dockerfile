@@ -1,8 +1,6 @@
-FROM node:18-alpine
-MAINTAINER jahirgomez jahirgomez1714@gmail.com
-WORKDIR /src
-COPY package.json .
-COPY /src/index.js .
+FROM node:12
+WORKDIR /usr/src/index
+COPY package*.json ./
 RUN npm install
-EXPOSE 80
-CMD ["npm", "start"]
+COPY . .
+CMD ["node", "index.js"]
