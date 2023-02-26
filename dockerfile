@@ -5,4 +5,4 @@ RUN apt-get -y install nodejs npm
 COPY package*.json ./
 COPY . .
 EXPOSE 80
-RUN node .\src\index.js
+RUN node ./src/index.js
