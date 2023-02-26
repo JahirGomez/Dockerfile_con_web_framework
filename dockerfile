@@ -1,7 +1,9 @@
-FROM node
+FROM ubuntu:latest
+MAINTAINER jahirgomez jahirgomez1714@gmail.com
+RUN apt-get update
+RUN apt-get -y install node
 WORKDIR /usr/src/app
 COPY package*.json ./
-RUN npm install
 COPY . .
 EXPOSE 80
-CMD ["node", "index.js"]
+RUN node .\src\index.js
