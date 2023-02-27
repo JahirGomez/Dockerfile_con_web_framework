@@ -1,3 +1,5 @@
+const express = require ("express");
+
 class Estudiante {
     constructor (matricula, nombre){
         this.matricula = matricula;
@@ -15,8 +17,6 @@ const estudiante3 = new Estudiante ("Juany", 17000917);
 Estudiantes.push(estudiante3);
 const estudiante4 = new Estudiante ("Fernando", 17000916);
 Estudiantes.push(estudiante4);
-
-const express = require ("express");
 
 const main = express();
 
