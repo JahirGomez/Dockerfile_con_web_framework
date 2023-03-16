@@ -9,22 +9,23 @@ class Estudiante {
 
 let Estudiantes = [];
 
-const estudiante1 = new Estudiante ("Horacio", 17000919);
+const estudiante1 = new Estudiante (17000919, "Horacio");
 Estudiantes.push(estudiante1);
-const estudiante2 = new Estudiante ("Jahir", 17000918);
+const estudiante2 = new Estudiante (17000918, "Jahir");
 Estudiantes.push(estudiante2);
-const estudiante3 = new Estudiante ("Juany", 17000917);
+const estudiante3 = new Estudiante (17000917, "Juany");
 Estudiantes.push(estudiante3);
-const estudiante4 = new Estudiante ("Fernando", 17000916);
+const estudiante4 = new Estudiante (17000916, "Fernando");
 Estudiantes.push(estudiante4);
 
 const main = express();
 
 main.get("/", (req, res)=>{
-    //res.send("Hello world!");
     res.send(Estudiantes);
 });
 
-main.listen(4000, ()=>{
+const server = main.listen(4000, ()=>{
     console.log("server on port ", 4000)
-}); 
+});
+
+module.exports = server;
